@@ -12,3 +12,10 @@
     <li><%= recipe.cook_time %> minutos</li>
   </ul>
 <% end %>
+
+<h2>Cozinhas</h2>
+<ul>
+  <% @cuisines.each do |cuisine| %>
+    <li><%= link_to cuisine.name, cuisine %></li>
+  <% end %>
+</ul>
