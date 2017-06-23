@@ -1,4 +1,7 @@
 <h1>Enviar uma receita</h1>
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
 <%= form_for @recipe do |f| %>
   <div>
     <%= f.label :title, 'Título' %>
