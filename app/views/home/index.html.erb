@@ -19,3 +19,10 @@
     <li><%= link_to cuisine.name, cuisine %></li>
   <% end %>
 </ul>
+
+<h2>Tipos</h2>
+<ul>
+  <% @recipe_types.each do |type| %>
+    <li><%= link_to type.name, type %></li>
+  <% end %>
+</ul>
