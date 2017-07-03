@@ -1,0 +1,15 @@
+<aside>
+  <h2>Cozinhas</h2>
+  <ul>
+    <% @cuisines.each do |cuisine| %>
+      <li><%= link_to cuisine.name, cuisine %></li>
+    <% end %>
+  </ul>
+
+  <h2>Tipos</h2>
+  <ul>
+    <% @recipe_types.each do |type| %>
+      <li><%= link_to type.name, type %></li>
+    <% end %>
+  </ul>
+</aside>
