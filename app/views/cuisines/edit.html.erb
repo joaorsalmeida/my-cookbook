@@ -1,11 +1,10 @@
-<h1>Cadastrar Nova Cozinha</h1>
 <ul>
 <%  @cuisine.errors.full_messages.each do |message|  %>
     <li><%= message%>
 <% end %>
 </ul>
-<%= form_for @cuisine do |f| %>
+<%= form_for @cuisine  do |f| %>
   <%= f.label :name, 'Nome' %>
   <%= f.text_field :name %>
-  <%= f.submit 'Enviar' %>
-<% end %>
+  <%= f.submit 'Enviar'  %>
+<%end%>

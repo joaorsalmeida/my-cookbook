@@ -61,7 +61,7 @@ feature 'Visitor view only recent recipes on home page' do
 
 
   def create_recipe(recipe_name)
-    generic_cuisine = Cuisine.create(name: 'Generic Cuisine')
+    generic_cuisine = create_cuisine
     generic_type = RecipeType.create(name: 'Generic Recipe Type')
     Recipe.create(title: recipe_name, recipe_type: generic_type,
                   cuisine: generic_cuisine, difficulty: 'Facil',
@@ -69,6 +69,10 @@ feature 'Visitor view only recent recipes on home page' do
                   method: 'Passo a passo do preparo',
                   cook_time: 60)
 
+  end
+
+  def create_cuisine
+    @cuisine ||= Cuisine.create(name: 'Generic Cuisine')
   end
 
 end
