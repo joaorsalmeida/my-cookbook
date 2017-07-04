@@ -16,6 +16,6 @@ feature 'User register cuisine' do
     fill_in 'Nome', with: ''
     click_on 'Enviar'
 
-    expect(page).to have_content('Você deve informar o nome da cozinha')
+    expect(page).to have_content('A cozinha deve ter um nome')
   end
 end
